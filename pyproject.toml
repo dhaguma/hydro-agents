@@ -1,0 +1,23 @@
+[project]
+name = "hydro-agents"
+version = "0.1.0"
+description = "Hydrologic modeling pipeline with GR4J, HSAMI+, SPOTPY, and VS Code agents"
+requires-python = ">=3.11"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "spotpy",
+]
+
+[tool.uv]
+# Optional: speed up resolution
+index-url = "https://pypi.org/simple"
+
+# Git dependencies
+[project.optional-dependencies]
+models = [
+    "gr4j @ git+https://github.com/amacd31/gr4j.git",
+    "hsamiplus @ git+https://github.com/hydrologie/hsamiplus.git",
+]
