@@ -59,8 +59,8 @@ spotpy_*
 Thumbs.db
 """
 
-def init_git_repo(base="hydro-agents"):
-    base_path = Path(base)
+def init_git_repo(base=None):
+    base_path = Path(base or ".").resolve()
     base_path.mkdir(parents=True, exist_ok=True)
 
     print(f"\n📁 Initializing Git repository in: {base_path.resolve()}\n")
