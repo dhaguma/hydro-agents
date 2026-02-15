@@ -1,0 +1,55 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+.venv/
+.env/
+.envrc
+*.log
+
+# uv environment + lock artifacts
+.uv/
+uv.lock.backup
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+!.vscode/agents/
+
+# -----------------------------
+# Hydrology Data (large files)
+# -----------------------------
+data/raw/
+data/processed/era5/
+data/processed/streamflow/
+
+# Keep outputs but ignore large intermediates
+data/outputs/calibration/*.csv
+data/outputs/calibration/*.sqlite
+data/outputs/calibration/*.db
+
+# Forecast ensembles (can be huge)
+data/outputs/forecasts/*_ensemble.csv
+
+# Parameter files are small and useful
+!data/outputs/parameters/*.json
+
+# -----------------------------
+# SPOTPY temporary files
+# -----------------------------
+*.csv
+*.sqlite
+*.db
+spotpy_*
+
+# -----------------------------
+# OS / Editor junk
+# -----------------------------
+.DS_Store
+Thumbs.db

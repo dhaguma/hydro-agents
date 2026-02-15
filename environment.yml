@@ -1,0 +1,15 @@
+name: hydro-agents
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - pip
+  - pip:
+      - spotpy
+      - git+https://github.com/amacd31/gr4j.git
+      - git+https://github.com/hydrologie/hsamiplus.git
